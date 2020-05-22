@@ -14,7 +14,7 @@ unzip kube-state-metrics-1.7.2.zip && \
 kubectl apply -f kube-state-metrics-1.7.2/kubernetes
 ```
 
-### Deploy Standalone YAML
+### Option 1: Deploy Standalone YAML
 
 #### Modify `newrelic-infrastructure-k8s-latest.yaml` with CLUSTER_NAME and NRIA_LICENSE_KEY
 ```yaml
@@ -30,7 +30,7 @@ env:
 kubectl create -f newrelic-infrastructure-k8s-latest.yaml
 ```
 
-### Deploy with Helm
+### Option 2: Deploy with Helm
 
 * `/newrelic-infrastructure-helm` is the helm chart available in `helm/charts` git repo
 * `/newrelic-infrastructure-helm/values.yaml` has been updated to include JMX integration.
